@@ -2,4 +2,5 @@ archive/*
 *.pyc
 *.swp
 .ipynb_checkpoints/*
-
+Pipfile.*
+Pipfile

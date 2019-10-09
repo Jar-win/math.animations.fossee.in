@@ -13,7 +13,7 @@ def front_page_topics(filename):
 
 @app.route('/')
 def index():
-    topics = front_page_topics(filename = JSON_PATH + "/topics.json")
+    topics = front_page_topics(filename = "topics.json")
     return render_template('index.html', topics=topics)
 
 @app.route('/Internship')
@@ -47,4 +47,4 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
