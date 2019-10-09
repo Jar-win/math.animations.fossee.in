@@ -1,0 +1,206 @@
+<div class="inner_cell">
+  <div class="card border-dark mb-4 col-md-12">
+  <div class="card-body text-dark">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Definition">Definition<a class="anchor-link" href="#Definition">&#182;</a></h3><p>The number <code>a</code> is said to be the limit of the sequence ($y_n$) if for any positive number $\epsilon$ there exists a real number $N$, such that for all $n &gt; N$, the inequality $|y_n - a | &gt; \epsilon $ exists.</p>
+</div>
+</div>
+</div>
+</div>
+	
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h3><p>Perhaps the most frightful distinction between High-School Mathematics and University mathematics is the introduction to the notion of Epsilons and Deltas for seemingly straightforward topics.</p>
+<p>Limit, which used to be the approaching value of the function, somehow becomes this cryptic mess overnight. Furthermore, the more we try to wrap our head around it, the more tricky it gets; as nearly all the epsilon-delta definitions look almost the same (with one symbol turned around here and there).</p>
+<p>Now to address the elephant in the room, do we really need such complex definitions? After all, all this time we didn’t worry about the shenanigans of these mathematical notations. The answer, ofcourse, is yes. And not because mathematicians like to make things complicated, but because the concepts of limit, continuity etc are some of the foundational blocks of higher mathematics and, to put in simple words, we can’t afford to have “loopholes” in these basic definitions.</p>
+<p>A subtle change in perspective will turn it from very challenging to something of an “Aha!” moment, and the elegance with which these definitions abstract the idea of something bigger, would make you appreciate the amount of effort that went into creating them.</p>
+<p>I am sure by this time a lot of reasonable questions would have surfaced, but before we tackle those doubts or even the definitions, I think it would be a good idea to familiarize ourselves with the essence of the epsilon-delta construct.</p>
+<p>For me, I like to remember them as a neighbourhood for a neighbourhood (or neighbourhood inside a neighbourhood to be precise). Consider the following animations:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="Neighbourhood.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>This idea of related neighbours is not too far from our everyday life. In a vague fuzzy way all neighborhoods (in one way or another) are dependent on each other. Fittingly enough, this idea will be carried along all through the till limit of a complex function.</em></p>
+<h2 id="Bird's-eye-view">Bird's eye view<a class="anchor-link" href="#Bird's-eye-view">&#182;</a></h2><p>So, How does epsilon and delta fit in here? If we consider delta to be a "negihbourhood" along the x-axis, and epsilon to be a "negihbourhood" along the y-axis, we get a system. By observing the behaviour of epsilon with resepct to small changes in delta, we can come to a conclusion about how various curves behaves.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Context-of-the-definition?">Context of the definition?<a class="anchor-link" href="#Context-of-the-definition?">&#182;</a></h3><p>Before going through the definition, let's take a generic example of a sequence which <em>seems</em> to be converging. i.e $15 \frac{(-1)^n}{n}+5$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="sequence.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The definition emphasis over limit of a sequence (Note that this is slightly different from Limit of a function), stating the conditions for the number <code>a</code> to be the limit of any sequence $y_n$. <br/></p>
+<p>Intrestingly, the condition of the given definition, <em>i.e</em> $|y_n - a| &lt; \epsilon$ says that the <strong>distance between the $n^{th}$ sequence and the limit of the sequence</strong> should be less than $\epsilon$, only then the sequence would be convergent. Intutively, we can see that from the animation below. <br/></p>
+<p>For the given sequence, let's assume that the limit is $5$. And, let's choose the value of $\epsilon$ <em>randomly</em> to be $1$.</p>
+<p>In the animation given below, the orange line represents the limit of the sequence, and the dashed line represents $a + \epsilon$, and $a - \epsilon$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="Distance.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Intutively, $|y_n - a| &lt; \epsilon$ says that all the <em>upcomming</em> values of $y_n$ would fall between $a+\epsilon$ or $a-\epsilon$ (or the $\epsilon$ band). This poses a question, how would we find the value of $y_n$ after which all the values of the sequence falls inside the $\epsilon$ band?</p>
+<p>Turns out that the answer for that is given in the definition itself. (For every $\epsilon &gt; 0$ there exists a Real Number $N$ such that for all $n &gt; N$ the inequality exists.)</p>
+<p>That means whatever arbitary value of $\epsilon$ we choose, there will exist a Real Number $N$.<br/>
+In our case, the value of $N = 15$ (for $\epsilon = 1$). Indicating that all n &gt; N (<em>i.e</em> $y_{16}, y_{17}, y_{18} \dots$) will fall inside the epsilon band.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="full_video.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>But where's $\delta$ here?<br> Replace $N$ with $\delta$</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applications">Applications<a class="anchor-link" href="#Applications">&#182;</a></h2><p>Needless to say, the given definition of limit is succint and carefully thought out. A fundamental understanding for the definition of limit (of a sequence) is important as it serves as the foundation for the entire family of $\epsilon - \delta$ definitions, including limit of a function, cauchy sequence, and so on...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="History">History<a class="anchor-link" href="#History">&#182;</a></h2><p>According to [4] the notion of $\epsilon-\delta$ was introduced in 1823 by Cauchy. Only in 1861, the epsilon-delta transformed to the current Weistrass' definition of Limit.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pause-and-ponder">Pause and ponder<a class="anchor-link" href="#Pause-and-ponder">&#182;</a></h2><ul>
+<li>A good way to understand any theorem is to try and break it (by doing so we get to see how <em>foolproof</em> it is). Is there a way where the given definition of limit can fall short?</li>
+<li>What happens when $|y_n - a| &gt; \epsilon$?</li>
+<li>Is there a significance between the relationship of $|y_n - a|$ and $|y_n -\epsilon|$</li>
+<li>Is it necessary that $\delta$ is a Real Number? </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html text-truncate">
+<h2 id="References-&amp;-Further-Reading">References &amp; Further Reading<a class="anchor-link" href="#References-&amp;-Further-Reading">&#182;</a></h2><h5 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3><p>[1] <a href="http://tutorial.math.lamar.edu/Classes/CalcII/Sequences.aspx">http://tutorial.math.lamar.edu/Classes/CalcII/Sequences.aspx</a> <br>
+[2] <a href="https://math.mit.edu/~apm/ch03.pdf">https://math.mit.edu/~apm/ch03.pdf</a> <br>
+[3] <a href="http://homepages.math.uic.edu/~saunders/MATH313/INRA/INRA_Chapter2.pdf">http://homepages.math.uic.edu/~saunders/INRA_Chapter2.pdf</a> <br>
+[4] <a href="https://arxiv.org/pdf/1502.06942.pdf">https://arxiv.org/pdf/1502.06942.pdf</a></p>
+<h5 id="Further-reading:">Further reading:<a class="anchor-link" href="#Further-reading:">&#182;</a></h3><p>[1] <a href="http://mathworld.wolfram.com/Epsilon-DeltaDefinition.html">http://mathworld.wolfram.com/Epsilon-DeltaDefinition.html</a> <br>
+[2] <a href="http://tutorial.math.lamar.edu/Classes/CalcI/DefnOfLimit.aspx">http://tutorial.math.lamar.edu/Classes/CalcI/DefnOfLimit.aspx</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<i><p>Name: Purusharth S. <br>
+Mentor: Purusharth S. <br>
+Verified by: <br>
+GitHub Link: <a href="https://github.com/Jar-win/archived_manim_projects">https://github.com/Jar-win/archived_manim_projects</a>  <br></p>
+<p><em>The following notes and their corrosponding animations was created by the above-mentioned contributor under the FOSSEE Animations Internship.</em></p></i>	
+
+</div>
+</div>
+</div>
+ 
+
