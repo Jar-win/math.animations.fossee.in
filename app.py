@@ -13,7 +13,7 @@ def front_page_topics(filename):
 
 @app.route('/')
 def index():
-    topics = front_page_topics(filename = "topics.json")
+    topics = front_page_topics(filename = JSON_PATH + "topics.json")
     return render_template('index.html', topics=topics)
 
 @app.route('/Internship')
