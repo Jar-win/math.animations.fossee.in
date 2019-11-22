@@ -1,0 +1,74 @@
+\documentclass[final,3p]{CSP}
+\usepackage{amssymb}
+\usepackage{changepage}
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Number Systems}
+\author{Padmapriya Mohan}
+
+\end{frontmatter}
+\section{Definition}
+A complex number is a number of the form $a + bi$, where $a,b \in \mathbb{R}$, and $i$ satisfies $i^{2}=-1$.
+
+
+\section{Motivation}
+ $\textit{“God created the natural numbers; all else is the work of man”}$ - Leopold Kronecker \par
+
+We know that there are several number systems that exist, and that each $completes$ some shortcoming of the preceding one. In short -   
+\begin{enumerate}
+\item $\mathbb{N}$ lacks the notion of an additive inverse. Hence, the integers $\mathbb{Z}$ are the additive completion of the natural numbers $\mathbb{N}$ 
+\item $\mathbb{Z}$ lacks the notion of an multiplicative inverse. Hence, the rationals $\mathbb{Q}$ are the multiplicative completion of the integers $\mathbb{Z}$.
+\item $\mathbb{Q}$ lacks the notion of a limit for a converging sequence. Hence, the reals $\mathbb{R}$ are the metric completion of the rationals $\mathbb{Q}$ 
+\item $\mathbb{R}$ lacks solutions to several polynomial equations and functions. Hence, the complex numbers $\mathbb{C}$ are the algebraic completion of the reals $\mathbb{R}$. 
+\end{enumerate}
+
+(animation 1)
+
+\section{Bird's Eye View}
+
+\noindent
+The construction of real numbers gave us the license to define and locate the square roots of numbers like 2, 3, 5, etc.  However, there was one roadblock the $\textit{reals}$ were unable to overcome. Consider the concept of negative roots; what would it mean to take the square root of $\mathbb{-1}$? Assuming that our current grasp of arithmetic is limited to the real numbers, it is justified to argue that there is no number on the real line that can satisfy the equation $x^{2} = -1$. Even if such a number did exist, it would only be in our $\textit{imagination}$! For the sake of mere speculation, let us momentarily allow for this impossibility. What algebraic rules would such a number, even if only $\textit{imaginary}$, adhere to?
+
+Perhaps the most suitable way to answer this is by examining the concept of quadratic equations.
+
+\section{Context of the definition}
+\noindent
+The Fundamental Theorem of Algebra states that the number of roots a quadratic equation is determined by the degree of the polynomial. Consider the polynomial $x^{2} + 1$. According to the theorem, our polynomial must have two roots, i.e. when graphed, it must cut the x-axis at 2 points. Upon examining its plot, we observe that surprisingly, the curve doesn't cut the x axis at all! It would be absurd to conclude that our quadratic has no solution;  the Fundamental Theorem of Algebra affirms that there are 2 values of x that when plugged into $x^{2} + 1$ give us 0. Clearly, we're missing something. It so happens that in this case, we're missing certain numbers. And not merely a bunch of them, rather, an entire dimension of them! \par
+(animation 2)
+We observe that our polynomial does indeed cross the x-axis. Only, it does so in another dimension. In this dimension, every point is called a \textit{Complex Number}. Just like the real numbers are represented by the number \textit{line}, the complex \textit{plane} provides a strong geometric intuition for the complex numbers. The complex numbers can be regarded as the \textit{quadratic extension} of the real numbers. 
+(animation 3)\par
+
+The points on the horizontal axis of this plane are called the real numbers, and those on the vertical axis are the imaginary numbers. The complex numbers are a combination of both. A simple geometrical analogy for a complex number would be a $\textit{vector}$. Only one question remains - what is an $\textit{imaginary number}?$ It would seem counter-intuitive to do so, but in order to define the imaginary numbers, we will make a brief return to the negative numbers.
+
+\subsection{Negative attitude towards Negative Numbers}
+The statement "10 pens from 5" appears to be a logical fallacy. How is it possible possess 5 pens lesser than nothing?! We know today that this statement is equivalent to "5 - 10", and when we look at it in a purely mathematical sense, it doesn't seem as ridiculous anymore. This clarity was absent in the past, when negative numbers were viewed as bizarre. Our skepticism of imaginary numbers is no different from the suspicion with which the negatives were once regarded. Negative numbers may just as well be a special case of the imaginary numbers. Take a look at the following animation:
+
+(animation4)
+(animation5)
+
+The states + and - are not binary, rather they are a continuum. You get from one state to the other by a 180 degree rotation, and i is nothing but rotational operator that allows for a 90 degree rotation. We could employ this rotational transformation to map to any complex number we wanted. 
+
+\section{Applications}
+It would not seem apparent, but complex numbers are better suited to describe the physics of the universe compared to any other number system. This is because they are closely associated with trigonometry, which arises while evaluating even the simplest of phenomenon. Complex numbers are extremely handy while analysing and designing circuits in the world of electronics. They appear in economic research as well. 
+
+\section{History}
+ In 50 A.D, Heron of Alexandria came across the term $√81-114$ while studying the volume of a pyramid . This is one of the first references to negative roots in the history of mathematics. The development of the complex number system thereafter progressed alongside the development of the negative numbers. Girolamo Cardano, who lived in the 1500s, is widely credited for the establishment of the study of complex numbers. Most mathematicians of the time didn't see negative roots as a concept worth exploring. The unfortunate title, "imaginary numbers", derives from this lack of understanding of the nature of complex numbers. Cardano's efforts were taken forward by a number of great mathematicians, notably Rafael Bombelli. The modern geometrical interpretation of complex numbers can be attributed to Caspar Wessel, whose intuition of the complex plane is one of the most fundamental ideas when learning about the behaviour of complex numbers. 
+ 
+\section{Points to ponder}
+Since the complex numbers are a plane, how does one decide between two complex numbers, which one is bigger, and which one is smaller? Can the notion of order $\textit{order}$ be introduced to this system?
+The fact that real numbers make a line, and complex numbers form a plane leads us to the obvious question - can there be three dimensional, four dimensional, or even n-dimensional numbers? If yes, what limitations of the preceding number systems would they solve? What limitations do the complex numbers pose?
+
+\section{References}
+\begin{enumerate}
+    \item Goldrei, Derek.(1996). \textit{Classic Set Theory}
+    \item Tao, Terence. (2006). \textit{Analysis 1}
+    \item http://www.welchlabs.com/resources/freebook
+\end{enumerate}
+
+\end{document}
+
+
+
+
