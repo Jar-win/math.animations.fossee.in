@@ -1,0 +1,173 @@
+<h2 id="uniform-convergence-and-continuitydifferentiation" class="unnumbered unnumbered">Uniform Convergence and Continuity</h2><hr/>
+
+<div class="inner_cell">
+    <div class="card border-dark mb-4 col-md-12">
+    <div class="card-body text-dark">
+  <div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="definition">Definition</h3>
+<p>If a sequence <span class="math inline">\({f_n}\)</span> of continuous functions <span class="math inline">\(f_n: A \to R\)</span> converges uniformly on <span class="math inline">\(A \subset R\)</span> to <span class="math inline">\(f: A \to R\)</span>, then <span class="math inline">\(f\)</span> is continuous on A.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h3 id="motivation">Motivation</h3>
+<p>Before discussing the essence of uniform convergence and continuity/differentiation, we need to understand the difference between Pointwise and Uniform convergence.<br />
+<br />
+Convergence implies that a sequence of function <span class="math inline">\({f_n}\)</span> tends to a function <span class="math inline">\(f\)</span> at very large values of <span class="math inline">\(n\)</span>.<br />
+<br />
+In simple words, Pointwise convergence means that, at every point the sequence of functions has its own speed of convergence (that can be very fast at some points and very very very very slow at others).<br />
+<br />
+Consequently, Uniform convergence means there is an overall speed of convergence.<br />
+<br />
+
+<video src="output1.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+<br/>
+Pointwise convergence is ideally the most natural way to define convergence, but it does not behave in the manner one might initially expect. For example, if a sequence of function is bounded, the pointwise convergence might not preserve its boundedness.<br />
+<br />
+Similar is the situation when we talk about continuity. If <span class="math inline">\(f_n\)</span> is a continuous function and is pointwise convergent to <span class="math inline">\(f\)</span>, we cannot be sure that f is also continuous. It is illustrated through the following example.<br />
+<br/>
+<video src="output2.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+
+
+<br />
+Here, we can visualise the importance of Uniform Convergence which is well behaved as was expected from Pointwise convergence. It usually preserves the properties of the sequence of function under consideration.</p>
+<h3 id="birds-eye-view">Bird’s Eye View</h3>
+<p>One of the most important property of uniform convergence is that it preserves continuity. It follows that uniform convergence is sufficient for preserving continuity. However, it is not necessary, that is, f being continuous does not imply that <span class="math inline">\(f_n\)</span> converges uniformly to <span class="math inline">\(f\)</span>.<br />
+<span class="math inline">\(f_n(x)=\frac{x}{n}\)</span></p>
+<h3 id="context-of-the-definition">Context of the Definition</h3>
+<p>In order to understand the definition,We’ll break it into certain parts. consider the following sequence of function:<br />
+</p>
+<p><span class="math inline">\(f_n(x)= \frac{x}{1+nx^2}\)</span></p>
+<p>In the definition, <span class="math inline">\(f_n\)</span> is <span class="math inline">\(Continuous\)</span>.<br />
+So,first we check whether the function <span class="math inline">\(f_n\)</span> is <span class="math inline">\(Continuous\)</span> or <span class="math inline">\(Not\)</span>.<br />
+
+<video src="fnContinuity.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+
+
+<br />
+<br />
+Next, <span class="math inline">\(f_n\)</span> converges uniformly to <span class="math inline">\(f\)</span>.<br />
+To show the uniform convergence we would require the formal definition of Uniform Convergence.<br />
+Suppose that <span class="math inline">\(f_n\)</span> is a sequence of functions <span class="math inline">\(f_n : A \to R\)</span> and <span class="math inline">\(f : A \to R\)</span>. Then <span class="math inline">\(f_n \to f\)</span> uniformly on <span class="math inline">\(A\)</span> if, for every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists <span class="math inline">\(N \in N\)</span> such that <span class="math inline">\(n &gt; N\)</span> implies that <span class="math inline">\(|f_n(x) - f(x)| &lt; \epsilon\)</span> <span class="math inline">\(\forall\)</span> <span class="math inline">\(x \in A\)</span><br />
+<br />
+The following animation shows that <span class="math inline">\(\forall x \in [0,1]\)</span> , <span class="math inline">\(f_n\)</span> converges to <span class="math inline">\(f = 0\)</span>.<br />
+
+<video src="fnConvergence.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+
+
+<br />
+In the animation we have shown a general construct with a random N.In the following part, We will get the value of N and give a stronger reason, using the above stated definition, that the function under consideration is Uniformly convergent.<br />
+<br />
+We, have to prove that<br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(|f_n(x) - f(x)| &lt; \epsilon\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(\Longrightarrow  |f_n(x) - 0| &lt; \epsilon\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(\Longrightarrow  |f_n(x) | &lt; \epsilon\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(\Longrightarrow  |\frac{x}{1+nx^2}| &lt; \epsilon\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+<br />
+<br />
+By using the method of finding the maximum using derivatives, we get,<br />
+max <span class="math inline">\(|f_n(x)|\)</span> at <span class="math inline">\(\frac{1}{\sqrt{n}}\)</span><br />
+</p>
+<p><span class="math inline">\(f_n(\frac{1}{\sqrt{n}})=\frac{1}{2\sqrt{n}}\)</span><br />
+<span class="math inline">\(\frac{1}{2\sqrt{n}}&lt;\epsilon\)</span><br />
+<span class="math inline">\(\sqrt{n}&gt;\frac{1}{2\epsilon}\)</span><br />
+<span class="math inline">\(n&gt;\frac{1}{4(\epsilon)^2}\)</span><br />
+</p>
+<p>Let <span class="math inline">\(\epsilon&gt;0\)</span><br />
+<br />
+Choose <span class="math inline">\(N&gt;\frac{1}{4\epsilon^2}\)</span><br />
+<br />
+Then <span class="math inline">\(\forall n&gt;N, \forall x \in R ,\)</span><br />
+<br />
+<span class="math inline">\(|f_n - 0| =|f_n|\leq \frac{1}{2\sqrt{n}}&lt;\epsilon\)</span> since max <span class="math inline">\(|f_n|=\frac{1}{2\sqrt{n}}\)</span><br />
+<br />
+Therefore, <span class="math inline">\(f_n \to f\)</span> Uniformly.<br />
+<br />
+If the above conditions are satisfied then <span class="math inline">\(f\)</span> is continuous according to the theorem. So now we verify whether f is continuous or not, which is easy to see as<br />
+</p>
+<p><span class="math inline">\(\forall x\in[0,1]\)</span>, <span class="math inline">\(f(x) =\lim\limits_{n\to \infty} f_n =0\)</span></p>
+<p>Thus, <span class="math inline">\(f(x)=0\)</span> is a continuous function.</p>
+<h3 id="beyond-the-definition">Beyond the Definition</h3>
+<p>We cannot state the same for a differentiable functions.Their uniform convergence does not imply anything about the convergence of their derivatives. The reason lies in the way derivatives behave.The values of two functions may be close together while the values of their derivatives are far apart.<br />
+Lets consider the same example we saw in the above section.<br />
+We will shows that the limit of the derivatives need not equal the derivative of the limit even if a sequence of differentiable functions converges uniformly and their derivatives converge pointwise.<br />
+<span class="math inline">\(f_n = \frac{x}{1+nx^2}\)</span><br />
+<span class="math inline">\(f^{&#39;}_{n} = \frac{1-nx^2}{(1+nx^2)^2}\)</span><br />
+The sequence <span class="math inline">\(f^{&#39;}_n\)</span> is also uniformly convergent. Let limit of <span class="math inline">\(f^{&#39;}_{n}\)</span> be <span class="math inline">\(f^{&#39;}\)</span><br />
+<br />
+<span class="math inline">\(f^{&#39;}=\lim\limits_{n\to \infty} f^{&#39;}_{n} =\)</span><span class="math inline">\(\left\{
+\begin{array}{l}
+0 \hspace{0.5cm} if \hspace{0.5cm}x \ne 0\\
+1 \hspace{0.5cm} if \hspace{0.5cm}x = 0
+\end{array}
+\right.\)</span></p>
+<p>Clearly, <span class="math inline">\(f&#39;\)</span> is discontinuous at <span class="math inline">\(x = 0\)</span>. Thus, <span class="math inline">\(f_n \to 0\)</span> uniformly, but <span class="math inline">\(f^{&#39;}_n(0) \to 1\)</span>, so the limit of the derivatives is not the derivative of the limit.<br />
+</p>
+<h3 id="application">Application</h3>
+<ul>
+<li><p>This theorem is essential in real and fourier analysis, since earlier mathematicians had an intuitive understanding that a sequence of continuous functions always converges to a continuous function.</p></li>
+<li><p>It shows that Uniform convergence is a stronger form of convergence for preserving continuity in the limit function.</p></li>
+</ul>
+<h3 id="history">History</h3>
+<p>In 1821 Augustin-Louis Cauchy stated that a convergent sum of continuous functions always continuous, to that Niels Henrik Abel in 1826 found reputed counter examples within the context of Fourier series, proving that Cauchy’s proof was incorrect.At that time, complete standard notions of convergence didn exist. Cauchy had proofed convergence using infinitesimal methods, which turned out that what Cauchy proved is that a uniformly convergent sequence of continuous functions has a continuous limit.</p>
+<h3 id="pause-and-ponder">Pause and Ponder</h3>
+<ul>
+<li><p>What essentially made the difference between pointwise and uniform convergence?</p></li>
+<li><p>Is it necessary for the field to be real?</p></li>
+</ul>
+<h3 id="references-and-further-reading">References and Further Reading</h3>
+<i>Principles of Mathematical Analysis, 3rd edition, w.Rudin<br />
+http://www.wright.edu/qun.li/MTH4320/4320S14/IntroAnalysis–JohnHunter.pdf<br/>
+http://www.math.iitb.ac.in/ars/week6.pdf https://people.math.gatech.edu/heil/6337/spring11/section0.1.pdf</i><br/>
+<h3 id="further-reading" class="unnumbered unnumbered">Further Reading</h3>
+<p>[1]https://liu.diva-portal.org/smash/get/diva2:1218166/FULLTEXT01.pdf<br />
+<br />
+<i>
+Name: Ani Samuel<br />
+Mentor:<br />
+Verified by:<br />
+GitHub Link:<br /></i>
+<br />
+<i>The following notes and their corrosponding animations was created by the above-mentioned contributor under the FOSSEE Animations Internship.</p></i>
