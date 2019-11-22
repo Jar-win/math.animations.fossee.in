@@ -1,0 +1,168 @@
+<h2> Why do we need Real Numbers?</h2><hr>
+<div class="inner_cell">
+    <div class="card border-dark mb-4 col-md-12">
+    <div class="card-body text-dark">
+  <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Definition">Definition<a class="anchor-link" href="#Definition">&#182;</a></h3><p>A Real number is a cut in $\mathbb{Q}$</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h3><p>It is a mind-boggling, yet rewarding task to contemplate the relationship between geometric length and arithmetic magnitude. Have you ever given it much thought? In the time of the Greeks, the prevailing number system was limited to the rational numbers. With this numerical structure, they were able to satisfactorily carry out measurements, but every once in a while, they would hit a wall. 
+Take for example a square with area 2. We are aware that the area of a square is equal to its side multiplied to itself. However, there is no rational number whose square is equal to 2. 
+​
+Essentially, the Greeks realised that not all ratios were commensurable, i.e. it was not always possible to find a third length that could be used to express the lengths that made up the ratio. Their number system was irreconcilable with incommensurability, and hence, they abandoned algebra for geometry, for compared to number, length was a better established, more concrete concept in their minds.
+​
+But how is it possible for $\sqrt{2}$ to exist as a geometric length and not a number? 
+​
+What follows is a geometrical proof that demonstrates that $\sqrt{2}$ doesn't belong in $\mathbb{Q}$. This particular proof is credited to the Princeton mathematician Stanley Tennenbaum.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="animation1.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bird's-Eye-View">Bird's Eye View<a class="anchor-link" href="#Bird's-Eye-View">&#182;</a></h3><p>The existence of numbers like $\sqrt{2}$ and $\pi$ showed us that there were <em>gaps</em> in the rational numbers. You could picture them as immeasurably small holes. These <em>gaps</em> indicate to us that the rational numbers are indeed insufficient and <em>incomplete</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="animation2.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Context-of-the-definition">Context of the definition<a class="anchor-link" href="#Context-of-the-definition">&#182;</a></h3><p>How does one work around this limitation of the rationals? By constructing the real numbers, of course! To do so, we will use the concept of Dedekind Cuts. Using a Dedekind Cut, a real number is represented as a spot at which the number line has been <em>cut</em> with an infinitely thin knife. Neat, isn't it?! Note, however, that this cut is not a gap between two individual rational numbers, rather, it is a gap between <em>two sets of rational numbers</em> . What's remarkable about the Dedekind Cuts is the fact that it allows us to define a real number purely in terms of the rationals.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Definition of a cut:</strong></p>
+<p>A cut in  $\mathbb{Q}$ is a pair of subsets A, B of $\mathbb{Q}$ such that</p>
+<ol>
+<li>$A \cup  B = \mathbb{Q}, A  \neq \emptyset , B \neq \emptyset ,A \cap B = \emptyset$</li>
+<li>$\textrm{If} a \in A  \textrm{ and } b \in B  \textrm{ then }  a &lt; b$</li>
+<li>A contains no largest element</li>
+</ol>
+<p>$\sqrt{2}$ corresponds to the Dedekind cut $A\mid B$ such that</p>
+<ol>
+<li>A = { $r \in \mathbb{Q}:r\leq 0 \textrm{ or } r^{2}&lt; 2$ }</li>
+<li>B = { $r \in \mathbb{Q}:r&gt; 0\textrm{ and }r^{2}\geq 2$ }</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video src="animation3.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Applications">Applications<a class="anchor-link" href="#Applications">&#182;</a></h3><p>The construction of real numbers comes in handy for more than just finding diagonals of unit squares. The rationals are inadequate when we deal with geometry, and more so when it comes to trigonometry or calculus, where numbers like $\pi$ make frequent appearances while calculating slopes of tangents and areas under curves.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="History">History<a class="anchor-link" href="#History">&#182;</a></h3><p>The first mention of irrational numbers can be found in certain Sutras of the Vedic period. Aryabhatta used the word <em>aasanna</em> , which roughly translates to <em>approaching</em> , while determining the value $\pi$. Our modern theory of real numbers, seems to derive more or less from Eudoxus's theory of proportions. Perhaps the most famous, and arguably one of the most elegant proofs in pure mathematics is that of $\sqrt{2}$ is not rational as it appears in Book X of Euclid's Elements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pause-and-Ponder">Pause and Ponder<a class="anchor-link" href="#Pause-and-Ponder">&#182;</a></h2><p>More than anything, the analysis of real numbers allows us to question the nature of the numbers we've been studying from primary school. Consider these seemingly simple question -</p>
+<ol>
+<li>What does it mean for a number to have a square root? We've seen that $\sqrt{2}$ is real; can -2 have a square root?</li>
+<li>While defining a cut, why shouldn't set A of the cut have a largest element? Would it be equivalent to set B containing no smallest element? Why is this condition significant?</li>
+<li>We just constructed the real numbers. How would you suppose the natural numbers are constructed? What about the other number systems?</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="References-and-Further-Readings">References and Further Readings<a class="anchor-link" href="#References-and-Further-Readings">&#182;</a></h3><h4 id="References">References<a class="anchor-link" href="#References">&#182;</a></h4><ol>
+<li>Pugh, Charles C.(2002). \textit{Real Mathematical Analysis}</li>
+<li>Tao, Terence. (2006). \textit{Analysis 1}</li>
+</ol>
+<h4 id="Furhter-Readings">Furhter Readings<a class="anchor-link" href="#Furhter-Readings">&#182;</a></h4><ol>
+<li>Cauchy Sequences</li>
+<li>Ordering of cuts and cut arithmetic</li>
+<li><a href="https://www.cut-the-knot.org/proofs/sq_root.shtml">https://www.cut-the-knot.org/proofs/sq_root.shtml</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+ 
+

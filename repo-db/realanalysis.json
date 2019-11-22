@@ -1,28 +1,21 @@
 {
-  "topics": [
-      {"name": "Introduction", "subtopics": [
-	      ["What makes number Real?", "whatmakesnumberreal"],
-	      ["Why \\( \\mathbb{Q} \\) (Rational Numbers) has gaps?", "gapsinrrationalnumber"],
-	      ["Construction and Proof of Existence of \\( \\mathbb{R} \\) ", "proofofexistence"],
-	      ["The Real Number Line", "realline"],
-	      ["What is Real Analysis anyway?","whatisrealanalysis"]
-	      ]},
-      {"name": "Sets and more", "subtopics": [
-              ["Ordered Sets", "ordered_sets"],
-	      ["Least Upper Bound and Greatest Lower Bound", "lub_and_glb"],
-              ["What's a field?", "fieldsandproperties"],
-	      ["Ordered Fields", "ordered_fields"],
-	      ["Extended Real Number System", "extended_realnumber_system"],
-	      ["Cartesian Products", "cartesian_products"],
-	      ["Eucledian Spaces", "eucledian_spaces"],
-	      ["Ordered Pairs", "ordered_pairs"]
-      ]},
-      {"name": "Limit", "subtopics": [
-	      ["Introduction to Limit of a sequence (epsilon-delta)", "limit-seq"],
-	      ["Limit of a Function","limit-func"]]},
-      {"name": "Functions of Several Variable", "subtopics": [
-		      ["Implicit Value Theorem","implicitvaluetheorem"],
-                      ["Inverse Value Theorem","inversevaluetheorem"]
-      ]}
-      
-  ]}
+	"topics": [
+		{"name": "Introduction", "subtopics": [
+			["Why do we need real numbers?", "whydoweneedrealnumbers"],
+			["Why \\( \\mathbb{R}^n, \\mathbb{C}^n, \\mathbb{Q}, \\text{and} \\quad \\mathbb{Z}\\) mean?", "whyrncnqandzn"]
+		   ]},
+		{"name": "Sequences and Series of Functions", "subtopics": [
+			["Uniform Convergence and Continuity", "uniformconvergence"],
+			["Polynomial & rational functions", "polynomialandrationalfunctions"],
+			["Stone Wiestrass Theorem", "stonewiestrasstheorem"]
+		]},
+		{"name": "Limit", "subtopics": [
+			["Introduction to Limit of a sequence (epsilon-delta)", "limit-seq"]
+		]},
+		{"name": "Functions of Several Variable", "subtopics": [
+			["What is f(x,y)?","whatisfxy"],
+			["Inverse Value Theorem","inversevaluetheorem"]
+		]}
+		
+	]}
+  
