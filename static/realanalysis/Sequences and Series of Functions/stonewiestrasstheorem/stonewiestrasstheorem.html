@@ -1,0 +1,90 @@
+<h2 id="stone-weierstrass-theorem" class="unnumbered unnumbered">Stone Weierstrass Theorem</h2>
+<hr>
+
+<div class="inner_cell">
+    <div class="card border-dark mb-4 col-md-12">
+    <div class="card-body text-dark">
+  <div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="definition">Definition</h2>
+<p>If <span class="math inline">\(f\)</span> is a continuous real or complex function on <span class="math inline">\([a,b]\)</span>, there exists a sequence of polynomials <span class="math inline">\(P_n(x)\)</span> such that <span class="math inline">\(\lim\limits_{n\to \infty}\)</span> <span class="math inline">\(P_n(x)=f(x)\)</span> uniformly on <span class="math inline">\([a,b]\)</span>. If <span class="math inline">\(f\)</span> is real, <span class="math inline">\(P_n\)</span> can be taken as real.</p>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 id="motivation">Motivation</h2>
+<p>Most of us are familiar with the concept of a Taylor Polynomial and the associated results i.e, an infinitely differentiable function <span class="math inline">\(f: [a,b] \to R\)</span> is arbitrarily well-approximated by its Taylor polynomials. These polynomials can be made arbitrarily close to certain functions on a closed interval but they require that the functions to be analytic (highly differentiable) which is a relatively small subclass of functions.<br />
+Then the question arises whether this condition is necessary for a function to be approximated on a closed interval, to an arbitrary degree, by a polynomial. Karl Weierstrass gave answer to the existing problem through the Weierstrass Approximation Theorem. He suggested that it is only necessary for <span class="math inline">\(f\)</span> to be continuous on the closed interval in order for such polynomials to exist.<br />
+</p>
+<h2 id="birds-eye-view">Bird’s Eye View</h2>
+<p>Here, we discuss the basic theme of approximating functions by polynomial functions. It is exemplified by the classical theorem of Weierstrass. The advantage of polynomial approximations can be seen from the fact that unlike general continuous functions, it is possible to numerically feed polynomial interpolations of such functions into a computer and the justification that we will be as accurate as we want is provided by the theorems.</p>
+<h2 id="context-of-the-definition">Context of the Definition</h2>
+<p>Lets break the theorem into parts to get a clarity about what it says. Examples are the best way in which one can understand any topic with much ease, so here, we’d also introduce an example and break it down along with the theorem.<br />
+</p>
+<ol>
+<li><p>Given: a function <span class="math inline">\(f\)</span> is a continuous real or comples function on <span class="math inline">\([a,b]\)</span><br />
+
+
+Let the example be <span class="math inline">\(f(x)=|x|\)</span><br />
+</p></li>
+
+<video src="Cont_func.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+
+<li><p>To Show: There exists a sequence of polynomials <span class="math inline">\(P_n(x)\)</span> such that <span class="math inline">\(\lim\limits_{n\to \infty}\)</span> <span class="math inline">\(P_n(x)=f(x)\)</span> uniformly on <span class="math inline">\([a,b]\)</span>.<br />
+Let, for the above example, the sequence of polynomials <span class="math inline">\(P_n(x)\)</span> is defined by</p>
+<p><span class="math inline">\(P_{n+1}(x) = P_n(x) + \frac{x^2 - p_{n}^2(x)}{2}\)</span><br />
+where <span class="math inline">\(P_0 =0\)</span> and n=0,1,2,<span class="math inline">\(\cdots\)</span></p>
+<p>According to the theorem we need to show that,<br />
+<span class="math inline">\(\lim\limits_{n\to \infty}\)</span> <span class="math inline">\(P_n(x)=|x|\)</span> uniformly on [-1,1].</p></li>
+<li><p>First Let’s see few of the terms in the sequence <span class="math display">\[\begin{aligned}
+P_0(x) =&amp; 0\\
+P_1(x) =&amp;  P_0(x) + \frac{x^2 - p_{0}^2(x)}{2}\\
+=&amp; 0 + \frac{x^2 - 0}{2}\\
+=&amp; \frac{x^2}{2} \\
+P_2(x) =&amp; P_1(x) + \frac{x^2 - p_{1}^2(x)}{2} \\
+ =&amp; \frac{x^2}{2} + \frac{x^2 - \frac{x^4}{4}}{2}\\
+=&amp; \frac{5x^2}{2} - \frac{x^4}{8} \\
+P_3(x) =&amp; P_2(x) + \frac{x^2 - p_{2}^2(x)}{2} \\
+=&amp;\frac{5x^2}{2} - \frac{x^4}{8}  + \frac{x^2 - (\frac{5x^2}{2} - \frac{x^4}{8})^2}{2}\\
+\ldots\end{aligned}\]</span> we get,</p>
+<p><span class="math inline">\(P_n(x)&gt;0\)</span> ,<span class="math inline">\(\forall\)</span> <span class="math inline">\(x \in [-1,1]\)</span><br />
+</p>
+<p>Now, observe the graphs to see how <span class="math inline">\(P_n(x)\)</span> converges uniformly to <span class="math inline">\(f(x)\)</span>. </li>
+
+
+<video src="seqofpolynomials.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+
+
+</ol>
+<h2 id="application">Application</h2>
+<ul>
+<li><p>With the help of this theorem, one can show that the space <span class="math inline">\(C[a, b]\)</span> is separable.</p></li>
+<li><p>One of the possible tools to solve the problems associated with Probability Theory.</p></li>
+<li><p>The theorem has many other applications to analysis, including Fourier series.</p></li>
+</ul>
+<h2 id="history">History</h2>
+<p>The original proof was given in 1885 by k. weierstrass. There are now a variety of different proofs that use vastly different approaches. One among them is a well-known proof given by S. Bernstein in 1911, now bearing his name. The proof uses only elementary methods and gives an explicit algorithm for approximating a function by the use of a class of polynomials It can also be seen that the Weierstrass Approximation Theorem is a special case of the more general Stone-Weierstrass Theorem, proved by Stone in 1937. He came up with the notion that very few of the properties of the polynomials were essential to the theorem.</p>
+<h2 id="pause-and-ponder">Pause and Ponder</h2>
+<ul>
+<li><p>There are different definitions given for this thorem over the years, what makes them different, that they are proved differently by mathematicians, or similar that they are put under the same name.</p></li>
+</ul>
+<h2 id="references-and-further-reading">References and Further Reading</h2>
+<p>Principles of Mathematical Analysis by W. Rudin 3rd Ed. http://math.uchicago.edu/may/REU2016/REUPapers/Gaddy.pdf https://minds.wisconsin.edu/bitstream/handle/1793/67009/rudin</p>
+<h2 id="further-reading" class="unnumbered unnumbered">Further Reading</h2>
+<p>[1] https://www.isibang.ac.in/ sury/hyderstone.pdf</p>
+<hr>
+<i><p>Name: Ani Samuel<br />
+Mentor:<br />
+Verified by:<br />
+GitHub Link:<br />
+<br />
+The following notes and their corrosponding animations was created by the above-mentioned contributor under the FOSSEE Animations Internship.</p></i>

@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{movie15}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{amsfonts, amsmath}
+\usepackage{array}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\geometry{
+	a4paper,
+	total={170mm,220mm},
+	left=20mm,
+	top=20mm,
+}
+\title{\textbf{\textbf{Sequence and Series of Functions}}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Stone Weierstrass Theorem}
+\section{Definition}
+If $f$ is a continuous real or complex function on $[a,b]$, there exists a sequence of polynomials $P_n(x)$ such that $\lim\limits_{n\to \infty}$ $ P_n(x)=f(x)$ uniformly on $[a,b]$. If $f$ is real, $P_n$ can be taken as real. 
+\section{Motivation}
+Most of us are familiar with the concept of a Taylor Polynomial and the associated results i.e, an infinitely differentiable function $f: [a,b] \to R$ is arbitrarily well-approximated by its Taylor polynomials.
+These polynomials can be made arbitrarily close to certain functions on a closed interval but they require that the functions to be analytic (highly differentiable) which is a relatively small subclass of functions.\\
+
+Then the question arises whether this condition is necessary for a function to be approximated on a closed interval, to an arbitrary degree, by a polynomial. Karl Weierstrass gave answer to the existing problem through the Weierstrass Approximation Theorem. He suggested that it is only necessary for $f$ to be continuous on the closed interval in order for such polynomials to exist.\\ 
+ 
+\section{Bird’s Eye View}
+Here, we discuss the basic theme of approximating functions by polynomial functions. It is exemplified by the classical theorem of Weierstrass. The advantage of polynomial approximations can be seen from the fact that unlike general continuous functions, it is possible to numerically feed polynomial interpolations of such functions into a computer and the justification that we will be as accurate as we want is provided by the theorems.
+\section{Context of the Definition}
+Lets break the theorem into parts to get a clarity about what it says. Examples are the best way in which one can understand any topic with much ease, so here, we'd also introduce an example and break it down along with the theorem.\\
+\begin{enumerate}
+	\item Given: a function $f$ is a continuous real or comples function on $[a,b]$\\
+	        Let the example be $f(x)=|x|$ \\
+	        (Contfunc)
+	\item To Show: There exists a sequence of polynomials $P_n(x)$ such that $\lim\limits_{n\to \infty}$ $ P_n(x)=f(x)$ uniformly on $[a,b]$.\\
+	        Let, for the above example, the sequence of polynomials $P_n(x)$ is defined by 
+	        \begin{center}
+	        	$P_{n+1}(x) = P_n(x) + \frac{x^2 - p_{n}^2(x)}{2}$\\
+	        	where $P_0 =0 $ and n=0,1,2,$\cdots$
+	        	\end{center}
+       According to the theorem we need to show that,\\
+        $\lim\limits_{n\to \infty}$ $ P_n(x)=|x|$  uniformly on [-1,1].
+	\item First Let's see few of the terms in the sequence
+ \begin{align*} 
+P_0(x) =& 0\\
+P_1(x) =&  P_0(x) + \frac{x^2 - p_{0}^2(x)}{2}\\
+=& 0 + \frac{x^2 - 0}{2}\\
+=& \frac{x^2}{2} \\
+P_2(x) =& P_1(x) + \frac{x^2 - p_{1}^2(x)}{2} \\
+ =& \frac{x^2}{2} + \frac{x^2 - \frac{x^4}{4}}{2}\\
+=& \frac{5x^2}{2} - \frac{x^4}{8} \\
+P_3(x) =& P_2(x) + \frac{x^2 - p_{2}^2(x)}{2} \\
+=&\frac{5x^2}{2} - \frac{x^4}{8}  + \frac{x^2 - (\frac{5x^2}{2} - \frac{x^4}{8})^2}{2}\\
+\ldots
+\end{align*} 
+we get,
+\begin{center}
+	$P_n(x)>0 $ ,$\forall$ $x \in [-1,1]$\\
+\end{center}
+Now, observe the graphs to see how $P_n(x)$ converges uniformly to $f(x)$.
+(seqofpolynomials)
+\end{enumerate}
+\section{Application}
+
+\begin{itemize}
+    \item With the help of this theorem, one can show that the space $C[a, b]$ is separable.
+    \item One of the possible tools to solve the problems associated with Probability Theory.
+    \item The theorem has many other applications to analysis, including Fourier series.
+\end{itemize}
+
+
+\section{History}
+The original proof was given in 1885 by k. weierstrass. There are now a variety of different proofs that use vastly different approaches. One among them is a  well-known proof given by  S. Bernstein in 1911,  now bearing his name. The proof uses only elementary methods and gives an explicit algorithm for
+approximating a function by the use of a class of polynomials It can also be seen that the Weierstrass Approximation Theorem is a special case of the more general Stone-Weierstrass Theorem, proved by
+Stone in 1937. He came up with the notion that very few of the properties of the polynomials were essential to the theorem.
+ 
+\section{Pause and Ponder}
+\begin{itemize}
+    \item There are different definitions given for this thorem over the years, what makes them different, that they are proved differently by mathematicians, or similar that they are put under the same name.
+\end{itemize}
+\section{References and  Further Reading}
+
+\begin{thebibliography}{}
+\bibitem{} Principles of Mathematical Analysis by W. Rudin 3rd Ed.
+\bibitem{} http://math.uchicago.edu/may/REU2016/REUPapers/Gaddy.pdf
+\bibitem{} https://minds.wisconsin.edu/bitstream/handle/1793/67009/rudin%20ch%207.pdf?sequence=5&isAllowed=y
+\end{thebibliography}
+\section*{Further Reading}
+[1] https://www.isibang.ac.in/~sury/hyderstone.pdf
+
+Name: Ani Samuel\\
+Mentor: \\
+Verified by:\\
+GitHub Link: \\\\
+The following notes and their corrosponding animations was created by the above-mentioned contributor under the FOSSEE Animations Internship.
+\end{document}

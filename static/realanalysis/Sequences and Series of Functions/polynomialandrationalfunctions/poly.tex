@@ -1,0 +1,126 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{movie15}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{amsfonts, amsmath}
+\usepackage{array}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\geometry{
+	a4paper,
+	total={170mm,220mm},
+	left=20mm,
+	top=20mm,
+}
+\title{\textbf{\textbf{Sequence and Series of Functions}}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Polynomial and Rational Function}
+\section{Definition}
+\textbf{Polynomial Function :}
+Let $a_i$ (i = 0, 1, ...., n) be fixed real numbers where n is some fixed non-negative integer. Let $S$ be
+a subset of $R$. A function $f: S \to R$ defined by
+\begin{center}
+$f(x) = a_0x^n + a_1x^{n-1} + a_2x^{n-2} + \cdot + a_n , \forall x \in S , a_0 \neq 0$
+\end{center}
+is called a polynomial function of degree n.\\
+\textbf{Rational Function :}
+A function which can be expressed as the quotient of two polynomial functions is called a
+rational function.
+Thus a function $f: S \to R$ defined by \\
+\begin{center}
+	$f(x)=\frac{a_0x^n + a_1x^{n-1} + a_2x^{n-2} + \cdot + a_n}{b_0x^m + b_1x^{m-1} + b_2x^{m-2} + \cdot + a_m} , \forall x \in\ S$\\
+\end{center}
+
+is called a rational function.
+Here $a_0 \neq  b_0 \neq 0, a_i, b_j \in R $ where i, j are some fixed real numbers and the polynomial function in
+the denominator is never zero.
+\section{Motivation}
+A Polynomial function, that we deal with since school, can be thought of as a type of mathematical tool. 
+They can be used for many purposes, and it spans nearly every human activity. Whether you’re trying to detect stock exchange,or errors in an Internet data transmission, or trying to do  value calculations in a business they are just the correct mathematical structure that can be used. \\
+Likewise, Polynomial division (which is nothing but the ratonal function) is widely used by pharmacists in field of pharmacy and drug manufacturers in order to determine whether apt amount of drug is given to patients and also whether proper amount of elements are added in medicines during its composition. A chemist uses it to derive a chemical formula for a chemical compound. \\
+One fascinating application of polynomial functions is Digital Photography. Traditional method of obtaing the image by its emulsion on a roll of film is gone. Instead, nearly every aspect of imaging is now governed by mathematics. The image is converted into a series of numbers, representing the characteristics of light striking an image sensor. On opening an image file, computer interprets the numbers andtransforms them to a visual image. Photo editing softwares use complex polynomials to transform images, allowing us to manipulate the  details of an image. \\
+Here, we will learn about the concept which has such wide applications.
+\section{Bird’s Eye View}
+The behavior of Polynomial functions helps in the modelling of various problems spread across different fields, may be it physics, chemistry, biology or in any business. Therefore, it becomes very important to analyse how these functions behave. 
+\section{Context of the Definition}
+Before visualising the graphs of polynomial and rational functions, we are required to know few terms that are related to analysing the behavior of their graphs.\\
+
+\begin{itemize}
+	\item \textbf{Leading Term:} The term containing the highest power of the variable.
+	\item \textbf{Leading Coefficient:} The coefficient of the leading term.
+	\item \textbf{End Behavior:} End behavior of a function $f$ describes the behavior of the graph of the function at the "ends" of the x-axis.\\
+	In simple words, the end behavior of a function describes the trend of the graph if we look to the right end of the x-axis (as x approaches $+ \infty$) and to the left end of the x-axis (as x approaches $-\infty$).
+	\item \textbf{Turning Point:} A Turning Point is a point at which the function values change from increasing to decreasing or decreasing to increasing i.e, the location at which the graph of a function changes direction.
+	\item \textbf{y-intercept: }The y-intercept is the point where the function has an input value of zero.
+	\item \textbf{x-intercepts:} The x-intercepts are the points where the output value is zero.\\
+	\textit{A polynomial of degree n will have, at most, n x-intercepts and n – 1 turning points.}
+	\item \textbf{Countiuous Function:} A continuous function has no breaks in its graph. In simple words the graph that can be drawn without lifting the pen from the paper. 
+	\item \textbf{Smooth Curve:} A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves.\\
+	\textit{The graphs of polynomial functions are both continuous and smooth.}
+\end{itemize}
+ 
+ From the definition of the Polynomial function in \textit{Section 1}, we see that the polynomial function is nothing but a power series. In orde to determine its behavior, we'll have a glimse on how power function behaves.\\
+ \textbf{Power Function:} A power function is a function that can be represented in the form
+ \begin{center}
+ $f(x)=kx^n$
+ \end{center}
+ where  $x$  and  $n$  are real numbers, and  $k$  is known as the coefficient.
+So, lets see a few examples and their behavior.\\
+(\verb|Power_func|)\\\\
+Any Polynomial functions' end behavior depends upon the power of the Leading Term. The picture will be clear by looking through an example. We'll also look at the local behavior(Turning Point) and x \verb|&| y- intercepts.\\
+(\verb|Polynomial_func|)\\\\
+Now, its time to see how Rational Functions behave.It is interesting to realize that even though rational functions are formed from two polynomial functions as defined in $Section 1$ some of there graphs are different from the ones we saw above.\\
+There are $Two$ new terms that are related to Rational Functions.
+\begin{itemize}
+	\item \textbf{Vertical Asymptote:} A vertical asymptote of a graph is a vertical line  x=a  where the graph tends toward positive or negative infinity as the inputs approach  a . We write as  $x \to a$ ,  $f(x) \to \infty$ , or as  $x \to -a$ ,  $f(x) \to -\infty$ .
+	\item \textbf{Vertical Asymptote:} A vertical asymptote of a graph is a vertical line  f(x)=b  where the graph approaches the line as the inputs increase or decrease without bound.. We write as  $x \to \infty$ and as  $x \to -\infty$ ,  $f(x) \to b$ .
+\end{itemize} 
+Here is a simple example.\\
+Let $P(x)=x^3+2x^2$ and $Q(x)=x^2+2x$\\
+then the rational function,we obtain is\\
+$f(x)=\frac{1}{x}$ \hspace{3cm} by definition in $Section 2$\\
+(Rational\verb|_|func)
+\section{Application}
+As mentioned in \textit{Section 2}, it has wide range of applications in various disciplines. It is used in
+\begin{itemize}
+    \item Economics for cost analysis.
+    \item Engineering to obtain curves for bridges.
+    \item Physics to determine projectiles/ trajectories.
+    \item Statistical modelling for multiple linear regression.
+\end{itemize}
+
+These are just a few examples amongs its endless applications.
+\section{History}
+Determining the roots of polynomial functions, or "solving algebraic equations", is among the oldest mathematical problem. However, the elegant and practical notation we use today only developed in the beginning of the 15th century. Before that, equations were written out in words. Later, in 1637 ,Rene Descartes used alphabets, numerics and symboles to descrobe them as seen today. He used letters from the beginning of the alphabet to denote constants and letters from the end of the alphabet to denote variables. Descartes also introduced the use of superscripts to denote exponents as well.
+ 
+\section{Pause and Ponder}
+\begin{itemize}
+    \item Rational functon is a division of polynomial which is again a polynomial function then how is there behavior different from each other.
+    \item Think about the activities/situations where you use these functions in your day to day life.
+\end{itemize}
+\section{References and  Further Reading}
+
+\begin{thebibliography}{}
+\bibitem{}Algebra and Trigonometry, Jay Abramson
+\bibitem{}https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-graphs/x2ec2f6f830c9fb89:poly-end-behavior/a/end-behavior-of-polynomials
+\bibitem{}http://mathquest.carroll.edu/CarrollActiveCalculus/S\verb|_|0\verb|_|6\verb|_|PowersPolysRationals.html
+\end{thebibliography}
+
+
+Name: Ani Samuel\\
+Mentor: \\
+Verified by:\\
+GitHub Link: \\\\
+The following notes and their corrosponding animations was created by the above-mentioned contributor under the FOSSEE Animations Internship.
+\end{document}
