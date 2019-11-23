@@ -14,7 +14,7 @@
 		]},
 		{"name": "Functions of Several Variable", "subtopics": [
 			["What is f(x,y)?","whatisfxy"],
-			["Inverse Value Theorem","inversevaluetheorem"]
+			["Higher Order Derivatives","higherorderderivatives"]
 		]}
 		
 	]}

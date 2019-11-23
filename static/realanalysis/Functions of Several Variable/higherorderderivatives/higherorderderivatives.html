@@ -1,0 +1,79 @@
+<h2>Higher Order Derivatives</h2>
+<hr>
+
+<div class="inner_cell">
+    <div class="card border-dark mb-4 col-md-12">
+    <div class="card-body text-dark">
+  <div class="text_cell_render border-box-sizing rendered_html">
+
+
+<h3>Definition</h3>
+Any derivative beyond the first derivative of a function are referred to as higher order derivatives.<br>
+A partial derivative of a function of several variables is its derivative with respect to one of those variables, with the others held constant. For example $ \frac{\partial z}{\partial x}$ is the first partial derivative of the function $z=f(x,y)$ with respect to $x$
+
+</div>
+</div>
+</div>
+</div>
+
+<h3>Motivation</h3>
+Moving from first order derivatives like ($\frac {dy}{dx}$ ) to higher order derivatives like $\frac {d^2y}{dx^2}$ and $\frac {d^3y}{dx^3}$ is something that most students entering the university for the first time have trouble grasping, but higher order derivatives form the foundation for concepts like acceleration, rate of inflation etc so it is essential to understand what they mean and what they represent.
+The whole situation changes when we consider function of several variables as they cannot be differentiated as the functions of one variable. This gives rise to the partial derivatives, which give rise to many important results like the heat equation, societal consumption function etc.
+
+
+<h3>Bird's Eye View</h3>
+Higher order derivatives are the derivatives of derivatives. What they represent is the sensitivity of the derivative function to change in input variable.
+For example :
+The second order derivative $\frac {d^2y}{dx^2}$ represents the sensitivity of the first derivative $\frac {dy}{dx}$ to changes in the input variable $x$. Similarly the third order derivative $\frac {d^3y}{dx^3}$ represents the sensitivity of the second order derivative $\frac {d^2y}{dx^2}$ to changes in the input variable $x$. 
+Partial derivatives can be understood as the derivatives of a multivariate function that has been converted to a function with one variable by considering other variables as constants.
+
+		<h3>But what does it mean?</h3>
+The intuition behind higher order derivatives can be understood in through this example. We know that for a function $y=f(x)$ it's first order derivative $\frac {dy}{dx}$ shows how much the function changes when there is a tiny change in $x$. In  a similar fashion as $\frac {dy}{dx}$ is also a function the derivative of that i.e. the second order derivative $\frac {d^2y}{dx^2}$ shows how much the first derivative function $\frac {dy}{dx}$ changes when there is small change in the input variable $x$. This same logic can be extrapolated to other higher order derivatives.
+
+The logic behind partial derivatives and partial derivatives of higher order is quite similar to the higher order derivative when we understand them as the derivatives of multivariate functions that have been converted to functions with one variable by considering other variables as constants. Partial derivatives of the first order shows how much the multivariate function changes when there is a tiny change in one variable when the other variables are held constant and as the first order partial derivative can also be considered as a multivariate function we can differential it partially again giving rise to partial derivatives of higher order. Partial derivatives of $(n+1)^{th}$ order show the sensitivity of the $n^{th}$ order partial derivative to the changes in different variables.
+
+For example:
+Partial derivatives of second order like $\frac {\partial^2 z}{{\partial x}{\partial y}}$ and $\frac {\partial^2 z}{\partial x^2}$ show the sensitivity of the first order partial derivative $\frac {\partial z}{\partial x}$ to changes in the variables $y$ and $x$ respectively. In this way the partial derivatives of  $n^{th}$ order show the sensitivity of partial derivatives of $(n-1)^{th}$ order.
+
+		<h3>Graphical Representation</h3>
+We know that a derivative of a function is the tangent drawn to the function at that point. In the similar way a second order derivative is a tangent drawn to to first order derivative at that point. 
+As higher order derivatives are also functions they can also be plotted on the cartesian plane. Here is an example of the function $f(x) = x^3$ , it's first order derivative and  it's second order derivative. 
+
+<video src="1.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+ 
+As we get partial derivatives from multivariate function they are usually plotted in the 3d space .As partial derivatives will also be function of several variables they can be plotted in the 3d space. Partial derivatives in the 3d space look like planes as they are calculated assuming one variable to be constant. This can be understood with an example.
+This is the plot of a multivariate function $z =x^2y^2$ and it's first order partial derivatives $\frac {\partial z}{\partial x}$ at $y=1$ and  $\frac {\partial z}{\partial y}$ at $x=1$.
+
+<video src="2.mp4" width="100%" controls  >
+      Your browser does not support the <code>video</code> element.
+</video>
+		<h3>Pause and Ponder</h3>
+		<ul>
+			<li>What will be the nth derivative of a nth degree polynomial?</li>
+			<li>If first derivative is the tangent to the function at that point then what will the second derivative to the function be at that point?</li>
+		</ul>
+		<h3>Applications</h3>
+		<ul>
+			<li>What will be the nth derivative of a nth degree polynomial?</li>
+			<li>If first derivative is the tangent to the function at that point then what will the second derivative to the function be at that point?</li>
+			<li>Higher order derivatives are extensively used in physics especially in the field of kinematics while dealing with the motion of objects.</li>
+			<li>Higher order derivatives are also used in operations research in the maximization and minimization problems.</li>
+			<li>Partial derivatives are used in physics in important equations like the heat equation.</li>
+		</ul>
+		<h3>Historical Note</h3>
+		<p>Isaac Newton and Gottfried Leibniz independently discovered calculus in the mid-17th century. However, each inventor claimed the other stole his work in a bitter dispute that continued until the end of their lives.</p>
+		<h3>References</h3>
+		<ul>
+			<li>https://en.wikipedia.org/wiki/Derivative</li>
+			<li>https://en.wikibooks.org/wiki/Calculus/Higher_Order_Derivatives</li>
+			<li>http://tutorial.math.lamar.edu/Classes/CalcI/HigherOrderDerivatives.aspx</li>
+		</ul>
+		<h3>Further reading</h3>
+		<ul>
+			<li>https://en.wikipedia.org/wiki/Derivative</li>
+			<li>https://en.wikibooks.org/wiki/Calculus/Higher_Order_Derivatives</li>
+			<li>http://tutorial.math.lamar.edu/Classes/CalcI/HigherOrderDerivatives.aspx</li>
+			<li>https://math.stackexchange.com/questions/2987574/how-to-see-discontinuity-of-second-derivative-from-graph-of-function</li>
+		</ul>
